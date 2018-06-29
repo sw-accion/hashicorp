@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hashicorp-vault
+  spring: 
+  cloud:
+    vault: 
+      scheme: http
+      host: 127.0.0.1
+      port: 8200
+      token: 30372901-ce31-c82e-f0d8-70553333e1a2
+      fail: true
