@@ -49,7 +49,7 @@ Vault Server Run:
     Cluster ID: 6a156877-4f74-3c50-f4b3-bbb7087cd20f
     
     Vault write:
-    # vault write secret/hashicorp-vault username=spring password=password
+    # vault write secret/hashicorp-vault example.username=spring example.password=password
     Success! Data written to: secret/hashicorp-vault
 
     Vault read:
