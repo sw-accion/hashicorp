@@ -26,26 +26,13 @@ public class StudentServiceImpl {
 	}
 
 	public void save(Student std) {
-		Student student = new Student();
 		
-		System.out.println("student "+std);
-
 		if(std.getGender().equals("MALE")){
-			student.setId(std.getId());
-			student.setRoleNumber(std.getRoleNumber());
-			student.setStudentName(std.getStudentName());
-			student.setStudentAge(std.getStudentAge());
-			student.setGender(std.getGender());
-			studentMsqlRepository.save(student);
+			
+			studentMsqlRepository.save(std);
 		}
 		else{
-			
-			student.setId(std.getId());
-			student.setRoleNumber(std.getRoleNumber());
-			student.setStudentName(std.getStudentName());
-			student.setStudentAge(std.getStudentAge());
-			student.setGender(std.getGender());
-			studentPsqlRepository.save(student);
+			studentPsqlRepository.save(std);
 		}
 		
 		
