@@ -29,10 +29,6 @@ public class Student {
 	private String gender;
 
 	
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", roleNumber=" + roleNumber + ", studentName=" + studentName + ", studentAge="
-				+ studentAge + ", gender=" + gender + "]";
-	}
+	
 
 }
