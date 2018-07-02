@@ -32,8 +32,6 @@ public class PostgreDb {
   	public DataSource db2Datasource() {
     	username = env.getProperty("example.username");
      	password = env.getProperty("example.password"); 
-     	System.out.println("data is username========="+username);
-   		System.out.println("data is password========="+password);
    		DriverManagerDataSource dataSource = new DriverManagerDataSource();
    		dataSource.setDriverClassName("org.postgresql.Driver");
    		dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres?useSSL=false");
