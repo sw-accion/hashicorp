@@ -25,31 +25,13 @@ public class StudentServiceImpl {
 		return studentDetails;
 	}
 
-	public void save(Student std) {
-		Student student = new Student();
-		
-		System.out.println("student "+std);
-
+	public Student save(Student std) {
 		if(std.getGender().equals("MALE")){
-			student.setId(std.getId());
-			student.setRoleNumber(std.getRoleNumber());
-			student.setStudentName(std.getStudentName());
-			student.setStudentAge(std.getStudentAge());
-			student.setGender(std.getGender());
-			studentMsqlRepository.save(student);
+			return studentMsqlRepository.save(std);
 		}
 		else{
-			
-			student.setId(std.getId());
-			student.setRoleNumber(std.getRoleNumber());
-			student.setStudentName(std.getStudentName());
-			student.setStudentAge(std.getStudentAge());
-			student.setGender(std.getGender());
-			studentPsqlRepository.save(student);
+			return studentPsqlRepository.save(std);
 		}
-		
-		
-		
 	}
 
 }

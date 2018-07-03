@@ -14,7 +14,7 @@ public class Student {
 
 	@Id
 	@Column(name="id")
-	private int id;
+	private Long id;
 
 	@Column(name = "role_number")
 	private int roleNumber;
@@ -27,12 +27,5 @@ public class Student {
 
 	@Column(name = "gender")
 	private String gender;
-
-	
-	@Override
-	public String toString() {
-		return "Student [id=" + id + ", roleNumber=" + roleNumber + ", studentName=" + studentName + ", studentAge="
-				+ studentAge + ", gender=" + gender + "]";
-	}
 
 }

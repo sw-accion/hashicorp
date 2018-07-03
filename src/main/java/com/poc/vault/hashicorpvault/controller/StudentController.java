@@ -18,15 +18,15 @@ public class StudentController {
 	private StudentServiceImpl  studentServiceImpl;
 	
 	
-	@GetMapping("/getStudent")
+	@GetMapping("/students")
 	public List<Student> getStudent(){
 		List<Student>  list = studentServiceImpl.getStudents();
 		return list;
 	}
 	
 	@PostMapping("/student")
-	public void save(@RequestBody Student std){
-		studentServiceImpl.save(std);
+	public Student save(@RequestBody Student std){
+		return studentServiceImpl.save(std);
 	}
 
 }
