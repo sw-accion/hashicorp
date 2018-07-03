@@ -21,7 +21,6 @@ public class StudentController {
 	@GetMapping("/students")
 	public List<Student> getStudent(){
 		List<Student>  lists = studentServiceImpl.getStudents();
-		System.out.println("testing============");
 		return lists;
 	}
 	
