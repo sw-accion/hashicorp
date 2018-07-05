@@ -20,8 +20,8 @@ public class StudentController {
 	
 	@GetMapping("/students")
 	public List<Student> getStudent(){
-		List<Student>  lists = studentServiceImpl.getStudents();
-		return lists;
+		List<Student>  studentList = studentServiceImpl.getStudents();
+		return studentList;
 	}
 	
 	@PostMapping("/student")

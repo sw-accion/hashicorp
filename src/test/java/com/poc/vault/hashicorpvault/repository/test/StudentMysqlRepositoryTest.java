@@ -36,7 +36,7 @@ public class StudentMysqlRepositoryTest {
 	public  void testSavestudent(){
 		Student student = getStudent();
 		
-		Student savedEntity = entityManager.persist(student);
+		Student savedEntity = entityManager.merge(student);
 		Student  getFrom = studentMsqlRepository.getOne(savedEntity.getId());
 		
 		assertThat(getFrom ,is(equalTo(savedEntity)));

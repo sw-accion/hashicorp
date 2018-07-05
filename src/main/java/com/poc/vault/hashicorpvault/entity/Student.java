@@ -2,18 +2,20 @@ package com.poc.vault.hashicorpvault.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
 
 @Entity
-@Table(name = "STUDENT1")
+@Table(name = "poc_student_test")
 @Data
 public class Student {
 
 	@Id
-	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "role_number")
